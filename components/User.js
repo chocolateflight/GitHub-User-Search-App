@@ -3,9 +3,9 @@ const User = () => {
     <section>
       <div className='h-[500px] bg-lm-color6 rounded-lg shadow-lg p-6 grid grid-cols-sm-user grid-rows-sm-user space-y-2 dark:bg-dm-color4 md:grid-rows-md-user lg:grid-rows-lg-user'>
         {/* User Image */}
-        <div className='h-[100%] mt-2 col-span-1 row-start-1 row-end-3 self-center'>
+        <div className='h-[100%] col-span-1 row-start-1 row-end-3 self-center'>
           <img
-            className='h-[100%] aspect-square rounded-full lg:h-[200px]'
+            className='h-[100%] min-w-[90px] aspect-square rounded-full lg:h-[200px]'
             src='/img/temp.jpeg'
             alt='temporary profile picture'
           />

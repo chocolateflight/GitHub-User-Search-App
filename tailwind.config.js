@@ -32,7 +32,8 @@ module.exports = {
       'dm-color2': '#FFFFFF',
       'dm-color3': '#141D2F',
       'dm-color4': '#1E2A47',
-      'err-color': '#F74646'
+      'err-color': '#F74646',
+      'modal-color': 'rgba(247, 70, 70, 0.8)'
     },
     fontFamily: {
       sans: ['Space Mono']
