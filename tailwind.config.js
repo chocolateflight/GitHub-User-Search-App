@@ -29,6 +29,7 @@ module.exports = {
       'lm-color5': '#F6F8FF',
       'lm-color6': '#FEFEFE',
       'lm-color7': '#222731',
+      'lm-color8': '#d0cfcf',
       'dm-color1': '#0079FF',
       'dm-color2': '#FFFFFF',
       'dm-color3': '#141D2F',
@@ -44,6 +45,7 @@ module.exports = {
       gridTemplateColumns: {
         'lg-user': '20% 1fr',
         'sm-user': '30% auto',
+        'lg-user-info': '70% auto'
       },
       gridTemplateRows: {
         'sm-user': '10% 10% auto auto auto',
