@@ -8,15 +8,28 @@ import Search from '../components/Search';
 import User from '../components/User';
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState("dark")
+  const [darkMode, setDarkMode] = useState('dark');
+  const [user, setUser] = useState();
 
   const darkModeChangeHandler = () => {
-    if (darkMode === "dark") {
-      setDarkMode("")
-    } else if (darkMode === "") {
-      setDarkMode("dark")
+    if (darkMode === 'dark') {
+      setDarkMode('');
+    } else if (darkMode === '') {
+      setDarkMode('dark');
     }
-  }
+  };
+
+  const inputHandler = async (enteredUser) => {
+    const response = await fetch(`/api/get-user/${enteredUser}`, {
+      method: 'GET',
+    });
+    const data = await response.json();
+    if (data.message) {
+      setUser(false)
+    } else {
+      setUser(data)
+    }
+  };
 
   return (
     <Fragment>
@@ -31,8 +44,8 @@ export default function Home() {
       <div id='darkmode' className={darkMode}>
         <div className='bg-lm-color5 flex justify-center px-[10%] h-screen dark:bg-dm-color3'>
           <div className='flex flex-col justify-center space-y-5 w-full max-w-4xl'>
-            <Navbar onDarkModeChange={darkModeChangeHandler} darkMode={darkMode}/>
-            <Search />
+            <Navbar onDarkModeChange={darkModeChangeHandler} darkMode={darkMode} />
+            <Search onInput={inputHandler} hasError={user === false ? "" : "hidden"} />
             <User />
           </div>
         </div>

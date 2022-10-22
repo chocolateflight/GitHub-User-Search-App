@@ -1,7 +1,20 @@
-const Search = () => {
+import { useRef } from 'react';
+
+const Search = (props) => {
+  const enteredUserRef = useRef();
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    const enteredUser = enteredUserRef.current.value;
+    props.onInput(enteredUser);
+  };
+
   return (
     <section>
-      <form className='h-[60px] bg-lm-color6 rounded-lg flex justify-around items-center px-2 text-xs w-full shadow-lg space-x-1 dark:bg-dm-color4 md:space-x-4'>
+      <form
+        className='h-[60px] bg-lm-color6 rounded-lg flex justify-around items-center px-2 text-xs w-full shadow-lg space-x-1 dark:bg-dm-color4 md:space-x-4'
+        onSubmit={submitHandler}
+      >
         {/* Icon */}
         <svg
           className='fill-lm-color1'
@@ -16,9 +29,10 @@ const Search = () => {
           className='w-8/12 text-lm-color3 placeholder:text-lm-color3 dark:bg-dm-color4 dark:placeholder:text-dm-color2 dark:text-dm-color2 md:w-8/12 md:text-base lg:w-10/12 focus:outline-none'
           type='text'
           placeholder='Search GitHub username...'
+          ref={enteredUserRef}
         />
         {/* Error */}
-        <span className='hidden text-xxs text-err-color font-bold w-[2/12] whitespace-nowrap md:text-xs'>
+        <span className={`${props.hasError} text-xxs text-err-color font-bold w-[2/12] whitespace-nowrap md:text-xs`}>
           No results
         </span>
         {/* Search */}
