@@ -7,9 +7,10 @@ import NotOptimized from '../components/NotOptimized';
 import Search from '../components/Search';
 import User from '../components/User';
 
-export default function Home() {
+export default function Home(props) {
   const [darkMode, setDarkMode] = useState('dark');
-  const [user, setUser] = useState();
+  const [user, setUser] = useState(props.data);
+  const [hasResult, setHasResult] = useState(true);
 
   const darkModeChangeHandler = () => {
     if (darkMode === 'dark') {
@@ -25,9 +26,10 @@ export default function Home() {
     });
     const data = await response.json();
     if (data.message) {
-      setUser(false)
+      setHasResult(false);
     } else {
-      setUser(data)
+      setUser(data);
+      setHasResult(true);
     }
   };
 
@@ -45,11 +47,24 @@ export default function Home() {
         <div className='bg-lm-color5 flex justify-center px-[10%] h-screen dark:bg-dm-color3'>
           <div className='flex flex-col justify-center space-y-5 w-full max-w-4xl'>
             <Navbar onDarkModeChange={darkModeChangeHandler} darkMode={darkMode} />
-            <Search onInput={inputHandler} hasError={user === false ? "" : "hidden"} />
-            <User />
+            <Search
+              onInput={inputHandler}
+              hasError={hasResult === false ? '' : 'hidden'}
+            />
+            <User userData={user} />
           </div>
         </div>
       </div>
     </Fragment>
   );
+}
+
+export async function getStaticProps() {
+  const response = await fetch('https://api.github.com/users/octocat');
+  const data = await response.json();
+  return {
+    props: {
+      userData: data,
+    },
+  };
 }
