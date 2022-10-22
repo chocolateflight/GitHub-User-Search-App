@@ -9,7 +9,7 @@ import User from '../components/User';
 
 export default function Home(props) {
   const [darkMode, setDarkMode] = useState('dark');
-  const [user, setUser] = useState(props.data);
+  const [user, setUser] = useState(props.userData);
   const [hasResult, setHasResult] = useState(true);
 
   const darkModeChangeHandler = () => {
@@ -51,7 +51,7 @@ export default function Home(props) {
               onInput={inputHandler}
               hasError={hasResult === false ? '' : 'hidden'}
             />
-            <User userData={user} />
+            <User selectedUserData={user} />
           </div>
         </div>
       </div>
