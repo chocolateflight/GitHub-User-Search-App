@@ -28,10 +28,12 @@ module.exports = {
       'lm-color4': '#2B3442',
       'lm-color5': '#F6F8FF',
       'lm-color6': '#FEFEFE',
+      'lm-color7': '#222731',
       'dm-color1': '#0079FF',
       'dm-color2': '#FFFFFF',
       'dm-color3': '#141D2F',
       'dm-color4': '#1E2A47',
+      'dm-color5': '#90A4D4',
       'err-color': '#F74646',
       'modal-color': 'rgba(247, 70, 70, 0.8)'
     },
