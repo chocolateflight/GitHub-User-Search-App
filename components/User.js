@@ -61,7 +61,7 @@ const User = () => {
           {/* Location */}
           <div className='grid grid-cols-8 mt-2 md:order-1'>
             <svg
-              className='col-span-1 fill-dm-color2'
+              className='col-span-1 fill-lm-color2 dark:fill-dm-color2'
               height='20'
               width='14'
               xmlns='http://www.w3.org/2000/svg'
@@ -75,7 +75,7 @@ const User = () => {
           {/* Website */}
           <div className='grid grid-cols-8 mt-2 md:order-3'>
             <svg
-              className='col-span-1 fill-dm-color2'
+              className='col-span-1 fill-lm-color2 dark:fill-dm-color2'
               height='20'
               width='20'
               xmlns='http://www.w3.org/2000/svg'
@@ -92,7 +92,7 @@ const User = () => {
           {/* Twitter */}
           <div className='grid grid-cols-8 mt-3 md:order-2'>
             <svg
-              className='col-span-1 fill-dm-color2'
+              className='col-span-1 fill-lm-color2 dark:fill-dm-color2'
               height='18'
               width='20'
               xmlns='http://www.w3.org/2000/svg'
@@ -106,7 +106,7 @@ const User = () => {
           {/* Company */}
           <div className='grid grid-cols-8 mt-2 md:order-4'>
             <svg
-              className='col-span-1 fill-dm-color2'
+              className='col-span-1 fill-lm-color2 dark:fill-dm-color2'
               height='20'
               width='20'
               xmlns='http://www.w3.org/2000/svg'
