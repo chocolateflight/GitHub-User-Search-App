@@ -1,18 +1,17 @@
 const User = () => {
   return (
     <section>
-      {/* h-[500px] bg-lm-color6 rounded-lg shadow-lg p-6 space-y-5 flex flex-col justify-center dark:bg-dm-color4 lg:grid lg:grid-cols-2 */}
-      <div className='h-[500px] bg-lm-color6 rounded-lg shadow-lg p-6 grid grid-cols-sm-user space-y-2 dark:bg-dm-color4'>
+      <div className='h-[500px] bg-lm-color6 rounded-lg shadow-lg p-6 grid grid-cols-sm-user grid-rows-sm-user space-y-2 dark:bg-dm-color4 md:grid-rows-md-user lg:grid-rows-lg-user'>
         {/* User Image */}
-        <div className='h-[70px] mt-2 md:h-[120px] col-span-1 self-center lg:col-span-1'>
+        <div className='h-[100%] mt-2 col-span-1 row-start-1 row-end-3 self-center'>
           <img
-            className='h-[100%] aspect-square rounded-full lg:h-[170%]'
+            className='h-[100%] aspect-square rounded-full lg:h-[200px]'
             src='/img/temp.jpeg'
             alt='temporary profile picture'
           />
         </div>
         {/* Basic Info */}
-        <div className='leading-none ml-2 col-span-1 self-center lg:ml-0 lg:grid lg:grid-cols-2'>
+        <div className='leading-none ml-2 col-span-1 self-center lg:ml-0 lg:grid lg:grid-cols-2 lg:self-auto row-start-1 row-end-3 lg:h-2'>
           <p className='text-sm font-bold dark:text-dm-color2 md:text-xl'>The Octocat</p>
           <a
             className='text-xs text-lm-color1 md:text-base lg:order-3'
@@ -22,7 +21,7 @@ const User = () => {
           >
             @octocat
           </a>
-          <p className='text-xs text-lm-color2 dark:text-dm-color2 md:text-base lg:self-center'>
+          <p className='text-xs text-lm-color2 dark:text-dm-color2 md:text-base '>
             Joined 25 Jan 2011
           </p>
         </div>

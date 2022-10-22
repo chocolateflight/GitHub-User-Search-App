@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     screens: {
       sm: '640px',
-      md: '555px',
+      md: '648px',
       lg: '980px',
       xl: '1200px',
     },
@@ -41,6 +41,11 @@ module.exports = {
       gridTemplateColumns: {
         'lg-user': '20% 1fr',
         'sm-user': '30% auto',
+      },
+      gridTemplateRows: {
+        'sm-user': '10% 10% auto auto auto',
+        'md-user': '15% 15% auto auto auto',
+        'lg-user': '10% 10% auto auto auto'
       }
     },
   },
