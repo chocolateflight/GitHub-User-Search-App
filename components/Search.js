@@ -13,7 +13,7 @@ const Search = () => {
         </svg>
         {/* Input */}
         <input
-          className='w-8/12 text-lm-color3 placeholder:text-lm-color3 dark:bg-dm-color4 dark:placeholder:text-dm-color2 dark:text-dm-color2 md:w-8/12 md:text-base lg:w-10/12'
+          className='w-8/12 text-lm-color3 placeholder:text-lm-color3 dark:bg-dm-color4 dark:placeholder:text-dm-color2 dark:text-dm-color2 md:w-8/12 md:text-base lg:w-10/12 focus:outline-none'
           type='text'
           placeholder='Search GitHub username...'
         />

@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { useState } from 'react';
 
 import { Fragment } from 'react';
 import Navbar from '../components/Navbar';
@@ -7,6 +8,16 @@ import Search from '../components/Search';
 import User from '../components/User';
 
 export default function Home() {
+  const [darkMode, setDarkMode] = useState("dark")
+
+  const darkModeChangeHandler = () => {
+    if (darkMode === "dark") {
+      setDarkMode("")
+    } else if (darkMode === "") {
+      setDarkMode("dark")
+    }
+  }
+
   return (
     <Fragment>
       <Head>
@@ -17,10 +28,10 @@ export default function Home() {
         <link rel='icon' type='image/png' sizes='32x32' href='./img/favicon-32x32.png' />
       </Head>
       <NotOptimized />
-      <div id='darkmode' className='dark'>
+      <div id='darkmode' className={darkMode}>
         <div className='bg-lm-color5 flex justify-center px-[10%] h-screen dark:bg-dm-color3'>
           <div className='flex flex-col justify-center space-y-5 w-full max-w-4xl'>
-            <Navbar />
+            <Navbar onDarkModeChange={darkModeChangeHandler} darkMode={darkMode}/>
             <Search />
             <User />
           </div>
