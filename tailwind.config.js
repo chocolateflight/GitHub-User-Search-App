@@ -8,8 +8,8 @@ module.exports = {
   theme: {
     screens: {
       sm: '640px',
-      md: '768px',
-      lg: '1024px',
+      md: '555px',
+      lg: '980px',
       xl: '1200px',
     },
     fontSize: {
@@ -37,7 +37,12 @@ module.exports = {
     fontFamily: {
       sans: ['Space Mono']
     },
-    extend: {},
+    extend: {
+      gridTemplateColumns: {
+        'lg-user': '20% 1fr',
+        'sm-user': '30% auto',
+      }
+    },
   },
   plugins: [],
 };

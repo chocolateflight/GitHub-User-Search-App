@@ -1,32 +1,34 @@
 const User = () => {
   return (
     <section>
-      <div className='h-[500px] bg-lm-color6 rounded-lg shadow-lg p-6 space-y-5 flex flex-col justify-center dark:bg-dm-color4'>
-        {/* Basic User Information */}
-        <div className='h-[70px] flex space-x-5 items-center md:h-[120px]'>
+      {/* h-[500px] bg-lm-color6 rounded-lg shadow-lg p-6 space-y-5 flex flex-col justify-center dark:bg-dm-color4 lg:grid lg:grid-cols-2 */}
+      <div className='h-[500px] bg-lm-color6 rounded-lg shadow-lg p-6 grid grid-cols-sm-user space-y-2 dark:bg-dm-color4'>
+        {/* User Image */}
+        <div className='h-[70px] mt-2 md:h-[120px] col-span-1 self-center lg:col-span-1'>
           <img
-            className='h-[100%] aspect-square rounded-full'
+            className='h-[100%] aspect-square rounded-full lg:h-[170%]'
             src='/img/temp.jpeg'
             alt='temporary profile picture'
           />
-          <div className='leading-none'>
-            <p className='text-sm font-bold dark:text-dm-color2 md:text-xl'>The Octocat</p>
-            <a
-              className='text-xs text-lm-color1 md:text-base'
-              href='https://github.com'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              @octocat
-            </a>
-            <p className='text-xs text-lm-color2 dark:text-dm-color2 md:text-base'>
-              Joined 25 Jan 2011
-            </p>
-          </div>
+        </div>
+        {/* Basic Info */}
+        <div className='leading-none ml-2 col-span-1 self-center lg:ml-0 lg:grid lg:grid-cols-2'>
+          <p className='text-sm font-bold dark:text-dm-color2 md:text-xl'>The Octocat</p>
+          <a
+            className='text-xs text-lm-color1 md:text-base lg:order-3'
+            href='https://github.com'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            @octocat
+          </a>
+          <p className='text-xs text-lm-color2 dark:text-dm-color2 md:text-base lg:self-center'>
+            Joined 25 Jan 2011
+          </p>
         </div>
 
         {/* Profile Description */}
-        <div className='w-full'>
+        <div className='w-full col-start-1 col-end-3 lg:col-start-2'>
           <p className='text-xs text-lm-color2 leading-6 dark:text-dm-color2 md:text-base'>
             Lorem ipsum dolor sit amet est mu consectetur adipisicing elit. Molestias
             odit, expedita rem quidem earum vel eius dolores mollitia voluptatem nobis?
@@ -34,23 +36,29 @@ const User = () => {
         </div>
 
         {/* Profile Stats */}
-        <div className='h-[85px] bg-lm-color5 flex justify-center items-center text-center space-x-8 px-2 rounded-lg dark:bg-dm-color3 md:justify-between md:px-20'>
+        <div className='col-start-1 col-end-3 h-[85px] bg-lm-color5 flex justify-center items-center text-center space-x-8 px-2 rounded-lg dark:bg-dm-color3 md:justify-between md:px-20 lg:col-start-2'>
           <div>
-            <p className='text-xxs text-lm-color2 dark:text-dm-color2 md:text-xs'>Repos</p>
+            <p className='text-xxs text-lm-color2 dark:text-dm-color2 md:text-xs'>
+              Repos
+            </p>
             <p className='text-sm font-bold dark:text-dm-color2 md:text-lg'>8</p>
           </div>
           <div className=''>
-            <p className='text-xxs text-lm-color2 dark:text-dm-color2 md:text-xs'>Followers</p>
+            <p className='text-xxs text-lm-color2 dark:text-dm-color2 md:text-xs'>
+              Followers
+            </p>
             <p className='text-sm font-bold dark:text-dm-color2 md:text-lg'>3938</p>
           </div>
           <div className=''>
-            <p className='text-xxs text-lm-color2 dark:text-dm-color2 md:text-xs'>Following</p>
+            <p className='text-xxs text-lm-color2 dark:text-dm-color2 md:text-xs'>
+              Following
+            </p>
             <p className='text-sm font-bold dark:text-dm-color2 md:text-lg'>9</p>
           </div>
         </div>
 
         {/* Profile Data */}
-        <div className='md:grid md:grid-rows-2 md:grid-cols-2'>
+        <div className='col-start-1 col-end-3 md:grid md:grid-rows-2 md:grid-cols-2 lg:col-start-2'>
           {/* Location */}
           <div className='grid grid-cols-8 mt-2 md:order-1'>
             <svg
