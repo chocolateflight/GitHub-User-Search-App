@@ -13,9 +13,11 @@ module.exports = {
       xl: '1200px',
     },
     fontSize: {
+      xxs: ['11px', '20px'],
       xs: ['13px', '20px'],
       sm: ['16px', '24px'],
       base: ['15px', '25px'],
+      b18: ['18px', '25px'],
       lg: ['22px', '33px'],
       xl: ['26px', '38px'],
     },
@@ -30,6 +32,7 @@ module.exports = {
       'dm-color2': '#FFFFFF',
       'dm-color3': '#141D2F',
       'dm-color4': '#1E2A47',
+      'err-color': '#F74646'
     },
     fontFamily: {
       sans: ['Space Mono']
