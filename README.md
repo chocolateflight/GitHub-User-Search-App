@@ -6,7 +6,6 @@ This is a solution to the [GitHub user search app challenge on Frontend Mentor](
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -14,9 +13,6 @@ This is a solution to the [GitHub user search app challenge on Frontend Mentor](
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -24,83 +20,85 @@ This is a solution to the [GitHub user search app challenge on Frontend Mentor](
 
 Users should be able to:
 
-- View the optimal layout for the app depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Search for GitHub users by their username
-- See relevant user information based on their search
-- Switch between light and dark themes
-- **Bonus**: Have the correct color scheme chosen for them based on their computer preferences. _Hint_: Research `prefers-color-scheme` in CSS.
-
-### Screenshot
-
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+- View the optimal layout for the app depending on their device's screen size ✅
+- See hover states for all interactive elements on the page ✅
+- Search for GitHub users by their username ✅
+- See relevant user information based on their search ✅
+- Switch between light and dark themes ✅
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [GitHub Repository](https://github.com/chocolateflight/GitHub-User-Search-App)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
 - [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- [Tailwind CSS](https://tailwindcss.com/) - CSS Framework
+- VS Code
+- Mobile-first workflow
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+This was my first project in which I used NextJS and Tailwind CSS. It was very exciting for me to see the differences between Next and React, to use the different Next features like the API, and also to see how Tailwind changes the process of writing CSS.
 
-To see how you can add code snippets, see below:
+Dynamic Routes
 
-```html
-<h1>Some HTML code I'm proud of</h1>
+```js
+async function handler(req, res) {
+  let userData;
+  if (req.method === 'GET') {
+    const { username } = req.query;
+    const response = await fetch(`https://api.github.com/users/${username}`);
+    userData = await response.json();
+    res.status(200).send(userData);
+  }
+}
+
+export default handler;
 ```
 
-```css
-.proud-of-this-css {
-  color: papayawhip;
+Dynamic Content
+
+```js
+{
+  blog ? (
+    <a
+      className={`col-span-7 text-xs ${
+        blog ? 'text-lm-color2 hover:text-lm-color1' : 'text-lm-color8'
+      } ${
+        blog ? 'dark:text-dm-color2 dark:hover:text-lm-color1' : 'dark:text-lm-color2'
+      }`}
+      href={blog}
+      target='_blank'
+      rel='noopener noreferrer'
+    >
+      {blog ? blog : 'unavailable'}
+    </a>
+  ) : (
+    <p
+      className={`col-span-7 text-xs ${blog ? 'text-lm-color2' : 'text-lm-color8'} ${
+        blog ? 'dark:text-dm-color2' : 'dark:text-lm-color2'
+      }`}
+    >
+      {blog ? blog : 'unavailable'}
+    </p>
+  );
 }
 ```
 
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉');
-};
-```
-
-
-
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
+In the next steps, I would like to get to know both NextJS and Tailwind CSS better, so that I can perhaps get started with back-end development via NextJS. At the same time, I would like to work a bit more with Vanilla JS to understand the language better. 
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
+- [Tailwind CSS Docs](https://tailwindcss.com/docs/) - The Tailwind CSS docs are a fantastic tool to get started with Tailwind. Great explanations, simple to understand
+- [NextJS Crash Course](https://www.youtube.com/watch?v=MFuwkrseXVE) - This amazing tutorial from [Academind](https://academind.com/) was a great help in getting started with Next
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
+- GitHub - [@chocolateflight](https://github.com/chocolateflight)
+- Frontend Mentor - [@chocolateflight](https://www.frontendmentor.io/profile/chocolateflight)
