@@ -53,7 +53,7 @@ const User = (props) => {
         {/* Profile Description */}
         <div className='w-full col-start-1 col-end-3 lg:col-start-2'>
           <p className='text-xs text-lm-color2 mt-4 leading-6 dark:text-dm-color2 md:text-base'>
-            {bio}
+            {bio ? bio : "This user has no bio"}
           </p>
         </div>
 
