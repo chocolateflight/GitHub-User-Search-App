@@ -28,7 +28,7 @@ const Navbar = (props) => {
   );
 
   return (
-    <nav className='flex justify-between items-center mb-12'>
+    <nav className='flex justify-between items-center md:mb-12'>
       <div className='text-xl font-bold dark:text-dm-color2 select-none'>devfinder</div>
       <div
         className='flex space-x-2 items-center cursor-pointer select-none text-lm-color2 fill-lm-color2 hover:fill-lm-color7 hover:text-lm-color7 dark:text-dm-color2 dark:hover:text-dm-color5 dark:fill-dm-color2 dark:hover:fill-dm-color5'

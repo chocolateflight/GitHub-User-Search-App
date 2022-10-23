@@ -25,7 +25,7 @@ const User = (props) => {
 
   return (
     <section>
-      <div className='h-[500px] bg-lm-color6 rounded-lg shadow-lg p-6 grid grid-cols-sm-user grid-rows-sm-user space-y-2 dark:bg-dm-color4 md:grid-rows-md-user lg:grid-rows-lg-user'>
+      <div className='h-[500px] bg-lm-color6 rounded-lg shadow-lg p-4 grid grid-cols-sm-user grid-rows-sm-user space-y-2 dark:bg-dm-color4 md:p-6 md:grid-rows-md-user lg:grid-rows-lg-user'>
         {/* User Image */}
         <div className='h-[100%] col-span-1 row-start-1 row-end-3 self-center'>
           <img
@@ -35,7 +35,7 @@ const User = (props) => {
           />
         </div>
         {/* Basic Info */}
-        <div className='leading-none ml-2 col-span-1 self-center lg:ml-0 lg:grid lg:grid-cols-lg-user-info lg:self-auto row-start-1 row-end-3 lg:h-2'>
+        <div className='leading-none space-y-1 ml-5 col-span-1 self-center row-start-1 row-end-3 md:ml-2 lg:ml-0 lg:grid lg:grid-cols-lg-user-info lg:self-auto lg:h-2'>
           <p className='text-sm font-bold dark:text-dm-color2 md:text-xl'>{name}</p>
           <a
             className='text-xs text-lm-color1 md:text-base lg:order-3'

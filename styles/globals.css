@@ -22,7 +22,7 @@
 }
 
 
-@media (min-width: 410px) {
+@media (min-width: 340px) {
   .not-optimized {
     display: none;
   }
