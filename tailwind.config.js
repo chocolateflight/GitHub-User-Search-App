@@ -30,6 +30,7 @@ module.exports = {
       'lm-color6': '#FEFEFE',
       'lm-color7': '#222731',
       'lm-color8': '#d0cfcf',
+      'lm-color9': '#60ABFF',
       'dm-color1': '#0079FF',
       'dm-color2': '#FFFFFF',
       'dm-color3': '#141D2F',

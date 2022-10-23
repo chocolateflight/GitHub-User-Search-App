@@ -37,7 +37,7 @@ const Search = (props) => {
         </span>
         {/* Search */}
         <button
-          className='bg-lm-color1 p-2.5 rounded-lg font-bold text-dm-color2 md:px-5 md:text-base'
+          className='bg-lm-color1 p-2.5 rounded-lg font-bold text-dm-color2 hover:bg-lm-color9 md:px-5 md:text-base'
           type='submit'
         >
           Search
