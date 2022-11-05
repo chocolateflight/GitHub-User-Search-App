@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { useState } from 'react';
-
 import { Fragment } from 'react';
+import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import NotOptimized from '../components/NotOptimized';
 import Search from '../components/Search';
@@ -52,6 +52,7 @@ export default function Home(props) {
               hasError={hasResult === false ? '' : 'hidden'}
             />
             <User selectedUserData={user} />
+            <Footer />
           </div>
         </div>
       </div>
